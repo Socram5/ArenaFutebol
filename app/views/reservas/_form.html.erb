@@ -1,16 +1,20 @@
-<%= simple_form_for @reserva, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :nome %>
-  <%= error_span(@reserva[:nome]) %>
-  <%= f.input :telefone %>
-  <%= error_span(@reserva[:telefone]) %>
-  <%= f.input :email %>
-  <%= error_span(@reserva[:email]) %>
-  <%= f.input :dia %>
-  <%= error_span(@reserva[:dia]) %>
-  <%= f.input :horario %>
-  <%= error_span(@reserva[:horario]) %>
+<%= simple_form_for @reserva, :html => { :class => 'form-vertical' } do |f| %>
+  <div>
+    
+      <%= f.input :nome %>
+      <%= f.input :telefone %>
+      <%= f.input :email %>
+      <%= f.input :dia %>
+      <%= f.input :horario %>
 
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+  </div>
+  
+     <%= f.button :submit, :class => 'btn-primary' %>
+     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 reservas_path, :class => 'btn btn-default' %>
 <% end %>
+  <div>
+    
+
+  </div>
+  

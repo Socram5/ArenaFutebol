@@ -1,8 +1,16 @@
 <%= simple_form_for @pagina, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :body %>
-  <%= error_span(@pagina[:body]) %>
+ 
+  <div class="form_inputs">
+  		<%= f.input :body %>
+  </div>
+ 
+  <div class="form_actions">
+  	
+		<%= f.button :submit, :class => 'btn-primary' %>
+	  	<%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+		                paginas_path, :class => 'btn btn-default' %>
 
-  <%= f.button :submit, :class => 'btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                paginas_path, :class => 'btn btn-default' %>
+  </div>
+
+		  
 <% end %>
