@@ -1,0 +1,16 @@
+<%= simple_form_for @reserva, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :nome %>
+  <%= error_span(@reserva[:nome]) %>
+  <%= f.input :telefone %>
+  <%= error_span(@reserva[:telefone]) %>
+  <%= f.input :email %>
+  <%= error_span(@reserva[:email]) %>
+  <%= f.input :dia %>
+  <%= error_span(@reserva[:dia]) %>
+  <%= f.input :horario %>
+  <%= error_span(@reserva[:horario]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                reservas_path, :class => 'btn btn-default' %>
+<% end %>

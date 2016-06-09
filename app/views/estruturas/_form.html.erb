@@ -1,0 +1,14 @@
+<%= simple_form_for @estrutura, :html => { :class => 'form-vertical' } do |f| %>
+  <div class="form.inputs">
+			<%= f.input :body %>
+  </div>
+  
+
+  <div class="form.actions">
+	  		 <%= f.button :submit, :class => 'btn-primary' %>
+	 		 <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+	                estruturas_path, :class => 'btn btn-default' %>
+
+  </div>
+ 
+<% end %>
