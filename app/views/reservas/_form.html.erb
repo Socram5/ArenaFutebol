@@ -1,5 +1,5 @@
 <%= simple_form_for @reserva, :html => { :class => 'form-vertical' } do |f| %>
-  <div>
+  <div class="form_inputs">
     
       <%= f.input :nome %>
       <%= f.input :telefone %>
@@ -8,13 +8,14 @@
       <%= f.input :horario %>
 
   </div>
+
   
-     <%= f.button :submit, :class => 'btn-primary' %>
-     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                reservas_path, :class => 'btn btn-default' %>
-<% end %>
+     
   <div>
-    
+      <%= f.button :submit, :class => 'btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                reservas_path, :class => 'btn btn-default' %>
+
 
   </div>
-  
+<% end %>
